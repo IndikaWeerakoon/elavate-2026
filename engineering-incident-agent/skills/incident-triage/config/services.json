@@ -1,0 +1,19 @@
+{
+  "services": {
+    "incident-agent-poc-sync-worker": {
+      "logGroup": "/aws/lambda/incident-agent-poc-sync-worker",
+      "repoPath": "~/repos/synthetic-sync-platform/src/sync-worker",
+      "sourceTable": "incident-agent-poc-source",
+      "destinationTable": "incident-agent-poc-destination",
+      "domain": "synthetic-sync",
+      "type": "event-processor"
+    },
+    "incident-agent-poc-dispatcher": {
+      "logGroup": "/aws/lambda/incident-agent-poc-dispatcher",
+      "repoPath": "~/repos/synthetic-sync-platform/src/dispatcher",
+      "sourceTable": "incident-agent-poc-source",
+      "domain": "synthetic-sync",
+      "type": "event-dispatcher"
+    }
+  }
+}

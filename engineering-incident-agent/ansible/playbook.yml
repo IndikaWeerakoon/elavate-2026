@@ -46,5 +46,68 @@
           args:
             creates: /usr/local/bin/aws
 
+    - name: Clone synthetic-sync-platform (public repo, read-only investigation target)
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.git:
+        repo: https://github.com/IndikaWeerakoon/elavate-2026.git
+        dest: "/home/{{ openclaw_user }}/repos/elavate-2026"
+        version: main
+        force: true
+
+    - name: Symlink synthetic-sync-platform to its own path under ~/repos
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.file:
+        src: "/home/{{ openclaw_user }}/repos/elavate-2026/synthetic-sync-platform"
+        dest: "/home/{{ openclaw_user }}/repos/synthetic-sync-platform"
+        state: link
+
+    - name: Ensure ~/.agents/skills exists
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.file:
+        path: "/home/{{ openclaw_user }}/.agents/skills"
+        state: directory
+        mode: "0755"
+
+    - name: Remove any previous copy of the skill (keeps deploys clean)
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.file:
+        path: "/home/{{ openclaw_user }}/.agents/skills/incident-triage"
+        state: absent
+
+    - name: Deploy incident-triage skill
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/../skills/incident-triage/"
+        dest: "/home/{{ openclaw_user }}/.agents/skills/incident-triage/"
+        mode: preserve
+
+    - name: Re-apply execute bit on skill scripts (copy can drop it)
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.file:
+        path: "/home/{{ openclaw_user }}/.agents/skills/incident-triage/scripts"
+        state: directory
+        mode: "0755"
+        recurse: true
+
+    - name: List discovered skills (verification, non-fatal if gateway not onboarded yet)
+      become: true
+      become_user: "{{ openclaw_user }}"
+      ansible.builtin.command: "/home/{{ openclaw_user }}/.npm-global/bin/openclaw skills list"
+      register: skills_list
+      failed_when: false
+      changed_when: false
+      environment:
+        HOME: "/home/{{ openclaw_user }}"
+
+    - name: Report discovered skills
+      ansible.builtin.debug:
+        var: skills_list.stdout_lines
+
   roles:
     - openclaw
