@@ -272,6 +272,7 @@ data "aws_iam_policy_document" "github_deploy_permissions" {
       "ec2:DescribeSecurityGroups",
       "ec2:DescribeSubnets",
       "ec2:DescribeVpcs",
+      "ec2:DescribeVpcAttribute",
       "ec2:DescribeKeyPairs",
       "ec2:DescribeAvailabilityZones",
       "ec2:DescribeVolumes",
