@@ -93,6 +93,26 @@ validates the *pipeline's* behavior — validating whether the
 `incident-triage` OpenClaw skill correctly diagnoses each category is a
 separate, manual step (`openclaw agent --message "..."` per record).
 
+## Live sync simulation (spread over time, not all at once)
+
+`scripts/seed-sync-batch.js` + `scripts/run-live-sync-batches.sh` reproduce
+the same 6 single-item failure/success shapes as the test matrix (skips
+`duplicate_processing`, which needs paired writes), but spread over real
+time instead of firing all 100 at once — useful for demoing a live
+dashboard or a scheduled `openclaw` scan picking up incidents as they occur.
+
+```
+cd scripts
+npm run live-sync   # or: ./run-live-sync-batches.sh
+```
+
+Seeds 10 records every 5 minutes for 1h10m (14 ticks × 10 = 140 records).
+Each tick cycles through: 2× `classic_mapping_bug`, 2× `payload_missing`,
+2× `marshalling_bug`, 1× `missing_correlation_id`, 1× `never_dispatched`,
+2× `healthy_control`. Appends to `scripts/live-sync-batches.jsonl`
+(tick, timestamp, id, category, correlationId) as it goes — safe to `tail -f`
+during a demo, and safe to re-run (PutItem is idempotent per id).
+
 ## IAM design
 
 Three separate roles, least privilege each:
