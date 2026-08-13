@@ -185,9 +185,17 @@ data "aws_iam_policy_document" "github_deploy_permissions" {
   }
 
   statement {
-    sid       = "PocLambdaEventSourceMapping"
-    effect    = "Allow"
-    actions   = ["lambda:CreateEventSourceMapping", "lambda:DeleteEventSourceMapping", "lambda:GetEventSourceMapping", "lambda:UpdateEventSourceMapping"]
+    sid    = "PocLambdaEventSourceMapping"
+    effect = "Allow"
+    actions = [
+      "lambda:CreateEventSourceMapping",
+      "lambda:DeleteEventSourceMapping",
+      "lambda:GetEventSourceMapping",
+      "lambda:UpdateEventSourceMapping",
+      "lambda:TagResource",
+      "lambda:UntagResource",
+      "lambda:ListTags",
+    ]
     resources = ["*"]
   }
 
