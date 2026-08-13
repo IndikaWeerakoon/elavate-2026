@@ -9,7 +9,12 @@ variable "name_prefix" {
 }
 
 variable "github_repo" {
-  description = "GitHub org/repo allowed to assume the deploy role, e.g. IndikaWeerakoon/elavate-2026"
+  description = <<-EOT
+    GitHub owner/repo allowed to assume the deploy role, using GitHub's
+    immutable-ID OIDC sub format: owner@ownerId/repo@repoId. Verify with:
+      gh api users/<owner> --jq '.id'
+      gh api repos/<owner>/<repo> --jq '.id'
+  EOT
   type        = string
-  default     = "IndikaWeerakoon/elavate-2026"
+  default     = "IndikaWeerakoon@24726173/elavate-2026@1332939682"
 }
