@@ -191,12 +191,19 @@ data "aws_iam_policy_document" "github_deploy_permissions" {
   }
 
   statement {
+    # DescribeLogGroups does not support resource-level scoping.
+    sid       = "PocLogsDescribe"
+    effect    = "Allow"
+    actions   = ["logs:DescribeLogGroups"]
+    resources = ["*"]
+  }
+
+  statement {
     sid    = "PocLogs"
     effect = "Allow"
     actions = [
       "logs:CreateLogGroup",
       "logs:DeleteLogGroup",
-      "logs:DescribeLogGroups",
       "logs:PutRetentionPolicy",
       "logs:TagResource",
       "logs:UntagResource",
