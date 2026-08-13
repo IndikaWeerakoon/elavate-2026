@@ -1,0 +1,41 @@
+name: openclaw-infra-destroy
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "destroy" to terminate the OpenClaw EC2 box and related resources'
+        required: true
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: openclaw-infra
+  cancel-in-progress: false
+
+jobs:
+  destroy:
+    if: github.event.inputs.confirm == 'destroy'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: engineering-incident-agent/infrastructure
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - run: terraform init
+
+      # ssh_ingress_cidr doesn't affect destroy plans, but the variable has no
+      # default so it must still be supplied.
+      - run: terraform destroy -auto-approve -var="ssh_ingress_cidr=127.0.0.1/32"

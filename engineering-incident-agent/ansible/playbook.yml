@@ -1,0 +1,50 @@
+---
+- name: Provision OpenClaw gateway host
+  hosts: openclaw
+  become: true
+  vars:
+    openclaw_user: ubuntu
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Upgrade all packages
+      ansible.builtin.apt:
+        upgrade: dist
+
+    - name: Install base packages
+      ansible.builtin.apt:
+        name:
+          - curl
+          - git
+          - unzip
+          - build-essential
+          - ripgrep
+          - jq
+          - ca-certificates
+        state: present
+
+    - name: Install AWS CLI v2 (arm64)
+      block:
+        - name: Download AWS CLI v2 installer
+          ansible.builtin.get_url:
+            url: https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip
+            dest: /tmp/awscliv2.zip
+            mode: "0644"
+
+        - name: Unzip AWS CLI installer
+          ansible.builtin.unarchive:
+            src: /tmp/awscliv2.zip
+            dest: /tmp
+            remote_src: true
+
+        - name: Run AWS CLI installer
+          ansible.builtin.command: /tmp/aws/install
+          args:
+            creates: /usr/local/bin/aws
+
+  roles:
+    - openclaw

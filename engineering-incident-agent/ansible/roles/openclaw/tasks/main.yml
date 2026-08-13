@@ -1,0 +1,46 @@
+---
+# Installs OpenClaw unattended (--no-prompt --no-onboard). The install
+# script provisions Node.js itself if missing. The final `openclaw onboard
+# --install-daemon` step is deliberately NOT run here — it drives an
+# interactive Slack + Anthropic OAuth flow that needs a human at the
+# terminal. Run it manually over SSH after this playbook finishes.
+
+- name: Check if OpenClaw is already installed
+  ansible.builtin.command: "/home/{{ openclaw_user }}/.openclaw/bin/openclaw --version"
+  register: openclaw_version_check
+  failed_when: false
+  changed_when: false
+  become: true
+  become_user: "{{ openclaw_user }}"
+
+- name: Download and run OpenClaw installer (unattended)
+  ansible.builtin.shell: |
+    set -o pipefail
+    curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-prompt --no-onboard
+  args:
+    executable: /bin/bash
+  become: true
+  become_user: "{{ openclaw_user }}"
+  environment:
+    HOME: "/home/{{ openclaw_user }}"
+  when: openclaw_version_check.rc != 0
+
+- name: Verify OpenClaw CLI is on PATH for the login shell
+  ansible.builtin.command: "/home/{{ openclaw_user }}/.openclaw/bin/openclaw --version"
+  register: openclaw_installed_version
+  changed_when: false
+  become: true
+  become_user: "{{ openclaw_user }}"
+
+- name: Report installed version
+  ansible.builtin.debug:
+    msg: "OpenClaw installed: {{ openclaw_installed_version.stdout }}"
+
+- name: Print manual onboarding reminder
+  ansible.builtin.debug:
+    msg: >-
+      Provisioning done. SSH in as {{ openclaw_user }} and run
+      `openclaw onboard --install-daemon` interactively to connect
+      Slack, set the model/API key, and install the systemd gateway
+      daemon. Gateway listens on 18789 (not exposed publicly) —
+      reach it via `ssh -L 18789:localhost:18789 ...`.

@@ -242,6 +242,75 @@ data "aws_iam_policy_document" "github_deploy_permissions" {
     ]
     resources = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/${var.name_prefix}-*"]
   }
+
+  # instance-profile is a distinct IAM resource type from role, needs its own ARN pattern
+  statement {
+    sid    = "PocIamInstanceProfiles"
+    effect = "Allow"
+    actions = [
+      "iam:CreateInstanceProfile",
+      "iam:DeleteInstanceProfile",
+      "iam:GetInstanceProfile",
+      "iam:AddRoleToInstanceProfile",
+      "iam:RemoveRoleFromInstanceProfile",
+      "iam:TagInstanceProfile",
+      "iam:UntagInstanceProfile",
+    ]
+    resources = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:instance-profile/${var.name_prefix}-*"]
+  }
+
+  # EC2 describe/create actions mostly don't support resource-level ARNs.
+  # Destructive actions are guarded by the Project tag instead.
+  statement {
+    sid    = "Ec2ReadAndCreate"
+    effect = "Allow"
+    actions = [
+      "ec2:DescribeInstances",
+      "ec2:DescribeImages",
+      "ec2:DescribeInstanceTypes",
+      "ec2:DescribeInstanceStatus",
+      "ec2:DescribeSecurityGroups",
+      "ec2:DescribeSubnets",
+      "ec2:DescribeVpcs",
+      "ec2:DescribeKeyPairs",
+      "ec2:DescribeAvailabilityZones",
+      "ec2:DescribeVolumes",
+      "ec2:DescribeAddresses",
+      "ec2:DescribeTags",
+      "ec2:DescribeNetworkInterfaces",
+      "ec2:DescribeIamInstanceProfileAssociations",
+      "ec2:RunInstances",
+      "ec2:CreateSecurityGroup",
+      "ec2:CreateTags",
+      "ec2:AllocateAddress",
+      "ec2:AssociateAddress",
+      "ec2:AssociateIamInstanceProfile",
+      "ec2:AuthorizeSecurityGroupIngress",
+      "ec2:AuthorizeSecurityGroupEgress",
+    ]
+    resources = ["*"]
+  }
+
+  statement {
+    sid    = "Ec2DestructiveTagGuarded"
+    effect = "Allow"
+    actions = [
+      "ec2:TerminateInstances",
+      "ec2:StopInstances",
+      "ec2:DeleteSecurityGroup",
+      "ec2:RevokeSecurityGroupIngress",
+      "ec2:RevokeSecurityGroupEgress",
+      "ec2:DisassociateIamInstanceProfile",
+      "ec2:ReleaseAddress",
+      "ec2:DisassociateAddress",
+    ]
+    resources = ["*"]
+    condition {
+      test     = "StringEquals"
+      variable = "aws:ResourceTag/Project"
+      values   = ["EngineeringIncidentAgent"]
+    }
+  }
 }
 
 resource "aws_iam_role_policy" "github_deploy" {

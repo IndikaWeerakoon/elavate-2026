@@ -1,0 +1,2 @@
+[openclaw]
+REPLACE_WITH_PUBLIC_IP ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/elavate-2026/incident-agent-poc-openclaw.pem

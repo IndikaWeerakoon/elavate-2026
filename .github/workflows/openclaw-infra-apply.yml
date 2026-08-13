@@ -1,0 +1,42 @@
+name: openclaw-infra-apply
+
+on:
+  workflow_dispatch:
+    inputs:
+      ssh_ingress_cidr:
+        description: "CIDR allowed to SSH into the box, e.g. 1.2.3.4/32"
+        required: true
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: openclaw-infra
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: engineering-incident-agent/infrastructure
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - run: terraform init
+
+      - run: terraform plan -var="ssh_ingress_cidr=${{ github.event.inputs.ssh_ingress_cidr }}" -out=tfplan
+
+      - run: terraform apply -auto-approve tfplan
+
+      - run: terraform output
