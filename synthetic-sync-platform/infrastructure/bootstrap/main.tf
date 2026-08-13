@@ -266,6 +266,7 @@ data "aws_iam_policy_document" "github_deploy_permissions" {
     effect = "Allow"
     actions = [
       "ec2:DescribeInstances",
+      "ec2:DescribeInstanceAttribute",
       "ec2:DescribeImages",
       "ec2:DescribeInstanceTypes",
       "ec2:DescribeInstanceStatus",
