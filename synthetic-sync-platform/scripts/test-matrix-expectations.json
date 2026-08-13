@@ -1,0 +1,2179 @@
+[
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-1",
+    "correlationId": "corr-a-1",
+    "seededItem": {
+      "id": "record-a-1",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-1",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-1",
+        "description": "Classic mapping bug case 1"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-2",
+    "correlationId": "corr-a-2",
+    "seededItem": {
+      "id": "record-a-2",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-2",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-2",
+        "description": "Classic mapping bug case 2"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-3",
+    "correlationId": "corr-a-3",
+    "seededItem": {
+      "id": "record-a-3",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-3",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-3",
+        "description": "Classic mapping bug case 3"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-4",
+    "correlationId": "corr-a-4",
+    "seededItem": {
+      "id": "record-a-4",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-4",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-4",
+        "description": "Classic mapping bug case 4"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-5",
+    "correlationId": "corr-a-5",
+    "seededItem": {
+      "id": "record-a-5",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-5",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-5",
+        "description": "Classic mapping bug case 5"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-6",
+    "correlationId": "corr-a-6",
+    "seededItem": {
+      "id": "record-a-6",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-6",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-6",
+        "description": "Classic mapping bug case 6"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-7",
+    "correlationId": "corr-a-7",
+    "seededItem": {
+      "id": "record-a-7",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-7",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-7",
+        "description": "Classic mapping bug case 7"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-8",
+    "correlationId": "corr-a-8",
+    "seededItem": {
+      "id": "record-a-8",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-8",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-8",
+        "description": "Classic mapping bug case 8"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-9",
+    "correlationId": "corr-a-9",
+    "seededItem": {
+      "id": "record-a-9",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-9",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-9",
+        "description": "Classic mapping bug case 9"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-10",
+    "correlationId": "corr-a-10",
+    "seededItem": {
+      "id": "record-a-10",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-10",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-10",
+        "description": "Classic mapping bug case 10"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-11",
+    "correlationId": "corr-a-11",
+    "seededItem": {
+      "id": "record-a-11",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-11",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-11",
+        "description": "Classic mapping bug case 11"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-12",
+    "correlationId": "corr-a-12",
+    "seededItem": {
+      "id": "record-a-12",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-12",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-12",
+        "description": "Classic mapping bug case 12"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-13",
+    "correlationId": "corr-a-13",
+    "seededItem": {
+      "id": "record-a-13",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-13",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-13",
+        "description": "Classic mapping bug case 13"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-14",
+    "correlationId": "corr-a-14",
+    "seededItem": {
+      "id": "record-a-14",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-14",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-14",
+        "description": "Classic mapping bug case 14"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-15",
+    "correlationId": "corr-a-15",
+    "seededItem": {
+      "id": "record-a-15",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-15",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-15",
+        "description": "Classic mapping bug case 15"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-16",
+    "correlationId": "corr-a-16",
+    "seededItem": {
+      "id": "record-a-16",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-16",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-16",
+        "description": "Classic mapping bug case 16"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-17",
+    "correlationId": "corr-a-17",
+    "seededItem": {
+      "id": "record-a-17",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-17",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-17",
+        "description": "Classic mapping bug case 17"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-18",
+    "correlationId": "corr-a-18",
+    "seededItem": {
+      "id": "record-a-18",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-18",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-18",
+        "description": "Classic mapping bug case 18"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-19",
+    "correlationId": "corr-a-19",
+    "seededItem": {
+      "id": "record-a-19",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-19",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-19",
+        "description": "Classic mapping bug case 19"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-20",
+    "correlationId": "corr-a-20",
+    "seededItem": {
+      "id": "record-a-20",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-20",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-20",
+        "description": "Classic mapping bug case 20"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-21",
+    "correlationId": "corr-a-21",
+    "seededItem": {
+      "id": "record-a-21",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-21",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-21",
+        "description": "Classic mapping bug case 21"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-22",
+    "correlationId": "corr-a-22",
+    "seededItem": {
+      "id": "record-a-22",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-22",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-22",
+        "description": "Classic mapping bug case 22"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-23",
+    "correlationId": "corr-a-23",
+    "seededItem": {
+      "id": "record-a-23",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-23",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-23",
+        "description": "Classic mapping bug case 23"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-24",
+    "correlationId": "corr-a-24",
+    "seededItem": {
+      "id": "record-a-24",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-24",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-24",
+        "description": "Classic mapping bug case 24"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-25",
+    "correlationId": "corr-a-25",
+    "seededItem": {
+      "id": "record-a-25",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-25",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-25",
+        "description": "Classic mapping bug case 25"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-26",
+    "correlationId": "corr-a-26",
+    "seededItem": {
+      "id": "record-a-26",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-26",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-26",
+        "description": "Classic mapping bug case 26"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-27",
+    "correlationId": "corr-a-27",
+    "seededItem": {
+      "id": "record-a-27",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-27",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-27",
+        "description": "Classic mapping bug case 27"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-28",
+    "correlationId": "corr-a-28",
+    "seededItem": {
+      "id": "record-a-28",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-28",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-28",
+        "description": "Classic mapping bug case 28"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-29",
+    "correlationId": "corr-a-29",
+    "seededItem": {
+      "id": "record-a-29",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-29",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-29",
+        "description": "Classic mapping bug case 29"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-30",
+    "correlationId": "corr-a-30",
+    "seededItem": {
+      "id": "record-a-30",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-30",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-30",
+        "description": "Classic mapping bug case 30"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-31",
+    "correlationId": "corr-a-31",
+    "seededItem": {
+      "id": "record-a-31",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-31",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-31",
+        "description": "Classic mapping bug case 31"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-32",
+    "correlationId": "corr-a-32",
+    "seededItem": {
+      "id": "record-a-32",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-32",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-32",
+        "description": "Classic mapping bug case 32"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-33",
+    "correlationId": "corr-a-33",
+    "seededItem": {
+      "id": "record-a-33",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-33",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-33",
+        "description": "Classic mapping bug case 33"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-34",
+    "correlationId": "corr-a-34",
+    "seededItem": {
+      "id": "record-a-34",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-34",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-34",
+        "description": "Classic mapping bug case 34"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-35",
+    "correlationId": "corr-a-35",
+    "seededItem": {
+      "id": "record-a-35",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-35",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-35",
+        "description": "Classic mapping bug case 35"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-36",
+    "correlationId": "corr-a-36",
+    "seededItem": {
+      "id": "record-a-36",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-36",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-36",
+        "description": "Classic mapping bug case 36"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-37",
+    "correlationId": "corr-a-37",
+    "seededItem": {
+      "id": "record-a-37",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-37",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-37",
+        "description": "Classic mapping bug case 37"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "classic_mapping_bug",
+    "id": "record-a-38",
+    "correlationId": "corr-a-38",
+    "seededItem": {
+      "id": "record-a-38",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-a-38",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-a-38",
+        "description": "Classic mapping bug case 38"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-1",
+    "correlationId": "corr-b-1",
+    "seededItem": {
+      "id": "record-b-1",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-1",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-2",
+    "correlationId": "corr-b-2",
+    "seededItem": {
+      "id": "record-b-2",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-2",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-3",
+    "correlationId": "corr-b-3",
+    "seededItem": {
+      "id": "record-b-3",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-3",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-4",
+    "correlationId": "corr-b-4",
+    "seededItem": {
+      "id": "record-b-4",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-4",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-5",
+    "correlationId": "corr-b-5",
+    "seededItem": {
+      "id": "record-b-5",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-5",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-6",
+    "correlationId": "corr-b-6",
+    "seededItem": {
+      "id": "record-b-6",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-6",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-7",
+    "correlationId": "corr-b-7",
+    "seededItem": {
+      "id": "record-b-7",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-7",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-8",
+    "correlationId": "corr-b-8",
+    "seededItem": {
+      "id": "record-b-8",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-8",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-9",
+    "correlationId": "corr-b-9",
+    "seededItem": {
+      "id": "record-b-9",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-9",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "payload_missing",
+    "id": "record-b-10",
+    "correlationId": "corr-b-10",
+    "seededItem": {
+      "id": "record-b-10",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-b-10",
+      "status": "PENDING"
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "Cannot read properties of undefined",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-1",
+    "correlationId": "corr-c-1",
+    "seededItem": {
+      "id": "record-c-1",
+      "correlationId": "corr-c-1",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-1",
+        "description": "Marshalling bug case 1"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-2",
+    "correlationId": "corr-c-2",
+    "seededItem": {
+      "id": "record-c-2",
+      "correlationId": "corr-c-2",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-2",
+        "description": "Marshalling bug case 2"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-3",
+    "correlationId": "corr-c-3",
+    "seededItem": {
+      "id": "record-c-3",
+      "correlationId": "corr-c-3",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-3",
+        "description": "Marshalling bug case 3"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-4",
+    "correlationId": "corr-c-4",
+    "seededItem": {
+      "id": "record-c-4",
+      "correlationId": "corr-c-4",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-4",
+        "description": "Marshalling bug case 4"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-5",
+    "correlationId": "corr-c-5",
+    "seededItem": {
+      "id": "record-c-5",
+      "correlationId": "corr-c-5",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-5",
+        "description": "Marshalling bug case 5"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-6",
+    "correlationId": "corr-c-6",
+    "seededItem": {
+      "id": "record-c-6",
+      "correlationId": "corr-c-6",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-6",
+        "description": "Marshalling bug case 6"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-7",
+    "correlationId": "corr-c-7",
+    "seededItem": {
+      "id": "record-c-7",
+      "correlationId": "corr-c-7",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-7",
+        "description": "Marshalling bug case 7"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-8",
+    "correlationId": "corr-c-8",
+    "seededItem": {
+      "id": "record-c-8",
+      "correlationId": "corr-c-8",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-8",
+        "description": "Marshalling bug case 8"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-9",
+    "correlationId": "corr-c-9",
+    "seededItem": {
+      "id": "record-c-9",
+      "correlationId": "corr-c-9",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-9",
+        "description": "Marshalling bug case 9"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "marshalling_bug",
+    "id": "record-c-10",
+    "correlationId": "corr-c-10",
+    "seededItem": {
+      "id": "record-c-10",
+      "correlationId": "corr-c-10",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "cloud-c-10",
+        "description": "Marshalling bug case 10"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true,
+      "destinationRecordMissingField": "tenantId"
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-1",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-1",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-1",
+        "description": "Missing correlationId case 1"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-2",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-2",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-2",
+        "description": "Missing correlationId case 2"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-3",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-3",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-3",
+        "description": "Missing correlationId case 3"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-4",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-4",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-4",
+        "description": "Missing correlationId case 4"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-5",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-5",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-5",
+        "description": "Missing correlationId case 5"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-6",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-6",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-6",
+        "description": "Missing correlationId case 6"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "missing_correlation_id",
+    "id": "record-d-7",
+    "correlationId": null,
+    "seededItem": {
+      "id": "record-d-7",
+      "tenantId": "tenant-demo-001",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-d-7",
+        "description": "Missing correlationId case 7"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "correlationIdAbsentFromLogs": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-1",
+    "correlationId": "corr-e-1",
+    "seededItem": {
+      "id": "record-e-1",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-1",
+      "payload": {
+        "legacyRecordId": "legacy-e-1",
+        "description": "Never-dispatched case 1 (status=undefined)"
+      }
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-2",
+    "correlationId": "corr-e-2",
+    "seededItem": {
+      "id": "record-e-2",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-2",
+      "payload": {
+        "legacyRecordId": "legacy-e-2",
+        "description": "Never-dispatched case 2 (status=\"pending\")"
+      },
+      "status": "pending"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-3",
+    "correlationId": "corr-e-3",
+    "seededItem": {
+      "id": "record-e-3",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-3",
+      "payload": {
+        "legacyRecordId": "legacy-e-3",
+        "description": "Never-dispatched case 3 (status=\"Pending\")"
+      },
+      "status": "Pending"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-4",
+    "correlationId": "corr-e-4",
+    "seededItem": {
+      "id": "record-e-4",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-4",
+      "payload": {
+        "legacyRecordId": "legacy-e-4",
+        "description": "Never-dispatched case 4 (status=\"PENDING \")"
+      },
+      "status": "PENDING "
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-5",
+    "correlationId": "corr-e-5",
+    "seededItem": {
+      "id": "record-e-5",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-5",
+      "payload": {
+        "legacyRecordId": "legacy-e-5",
+        "description": "Never-dispatched case 5 (status=\"SYNCED\")"
+      },
+      "status": "SYNCED"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-6",
+    "correlationId": "corr-e-6",
+    "seededItem": {
+      "id": "record-e-6",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-6",
+      "payload": {
+        "legacyRecordId": "legacy-e-6",
+        "description": "Never-dispatched case 6 (status=undefined)"
+      }
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-7",
+    "correlationId": "corr-e-7",
+    "seededItem": {
+      "id": "record-e-7",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-7",
+      "payload": {
+        "legacyRecordId": "legacy-e-7",
+        "description": "Never-dispatched case 7 (status=\"pending\")"
+      },
+      "status": "pending"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-8",
+    "correlationId": "corr-e-8",
+    "seededItem": {
+      "id": "record-e-8",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-8",
+      "payload": {
+        "legacyRecordId": "legacy-e-8",
+        "description": "Never-dispatched case 8 (status=\"Pending\")"
+      },
+      "status": "Pending"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-9",
+    "correlationId": "corr-e-9",
+    "seededItem": {
+      "id": "record-e-9",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-9",
+      "payload": {
+        "legacyRecordId": "legacy-e-9",
+        "description": "Never-dispatched case 9 (status=\"PENDING \")"
+      },
+      "status": "PENDING "
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-10",
+    "correlationId": "corr-e-10",
+    "seededItem": {
+      "id": "record-e-10",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-10",
+      "payload": {
+        "legacyRecordId": "legacy-e-10",
+        "description": "Never-dispatched case 10 (status=\"SYNCED\")"
+      },
+      "status": "SYNCED"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-11",
+    "correlationId": "corr-e-11",
+    "seededItem": {
+      "id": "record-e-11",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-11",
+      "payload": {
+        "legacyRecordId": "legacy-e-11",
+        "description": "Never-dispatched case 11 (status=undefined)"
+      }
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-12",
+    "correlationId": "corr-e-12",
+    "seededItem": {
+      "id": "record-e-12",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-12",
+      "payload": {
+        "legacyRecordId": "legacy-e-12",
+        "description": "Never-dispatched case 12 (status=\"pending\")"
+      },
+      "status": "pending"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-13",
+    "correlationId": "corr-e-13",
+    "seededItem": {
+      "id": "record-e-13",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-13",
+      "payload": {
+        "legacyRecordId": "legacy-e-13",
+        "description": "Never-dispatched case 13 (status=\"Pending\")"
+      },
+      "status": "Pending"
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "never_dispatched",
+    "id": "record-e-14",
+    "correlationId": "corr-e-14",
+    "seededItem": {
+      "id": "record-e-14",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-e-14",
+      "payload": {
+        "legacyRecordId": "legacy-e-14",
+        "description": "Never-dispatched case 14 (status=\"PENDING \")"
+      },
+      "status": "PENDING "
+    },
+    "expected": {
+      "dispatched": false,
+      "destinationWriteFails": null,
+      "failureReasonContains": null,
+      "finalSourceStatus": null,
+      "destinationHasRecord": false,
+      "noLogsAtAll": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-1",
+    "correlationId": "corr-f-1",
+    "seededItem": {
+      "id": "record-f-1",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-1",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-1",
+        "description": "Healthy control case 1"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-2",
+    "correlationId": "corr-f-2",
+    "seededItem": {
+      "id": "record-f-2",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-2",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-2",
+        "description": "Healthy control case 2"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-3",
+    "correlationId": "corr-f-3",
+    "seededItem": {
+      "id": "record-f-3",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-3",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-3",
+        "description": "Healthy control case 3"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-4",
+    "correlationId": "corr-f-4",
+    "seededItem": {
+      "id": "record-f-4",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-4",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-4",
+        "description": "Healthy control case 4"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-5",
+    "correlationId": "corr-f-5",
+    "seededItem": {
+      "id": "record-f-5",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-5",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-5",
+        "description": "Healthy control case 5"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-6",
+    "correlationId": "corr-f-6",
+    "seededItem": {
+      "id": "record-f-6",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-6",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-6",
+        "description": "Healthy control case 6"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-7",
+    "correlationId": "corr-f-7",
+    "seededItem": {
+      "id": "record-f-7",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-7",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-7",
+        "description": "Healthy control case 7"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-8",
+    "correlationId": "corr-f-8",
+    "seededItem": {
+      "id": "record-f-8",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-8",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-8",
+        "description": "Healthy control case 8"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-9",
+    "correlationId": "corr-f-9",
+    "seededItem": {
+      "id": "record-f-9",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-9",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-9",
+        "description": "Healthy control case 9"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-10",
+    "correlationId": "corr-f-10",
+    "seededItem": {
+      "id": "record-f-10",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-10",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-10",
+        "description": "Healthy control case 10"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-11",
+    "correlationId": "corr-f-11",
+    "seededItem": {
+      "id": "record-f-11",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-11",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-11",
+        "description": "Healthy control case 11"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-12",
+    "correlationId": "corr-f-12",
+    "seededItem": {
+      "id": "record-f-12",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-12",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-12",
+        "description": "Healthy control case 12"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-13",
+    "correlationId": "corr-f-13",
+    "seededItem": {
+      "id": "record-f-13",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-13",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-13",
+        "description": "Healthy control case 13"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-14",
+    "correlationId": "corr-f-14",
+    "seededItem": {
+      "id": "record-f-14",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-14",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-14",
+        "description": "Healthy control case 14"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "healthy_control",
+    "id": "record-f-15",
+    "correlationId": "corr-f-15",
+    "seededItem": {
+      "id": "record-f-15",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-f-15",
+      "status": "PENDING",
+      "payload": {
+        "cloudRecordId": "record-f-15",
+        "description": "Healthy control case 15"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": false,
+      "failureReasonContains": null,
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": true
+    }
+  },
+  {
+    "category": "duplicate_processing",
+    "id": "record-g-1",
+    "correlationId": "corr-g-1",
+    "seededItem": {
+      "id": "record-g-1",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-g-1",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-g-1",
+        "description": "Duplicate-processing case 1"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "possibleDuplicateLogLines": true
+    }
+  },
+  {
+    "category": "duplicate_processing",
+    "id": "record-g-2",
+    "correlationId": "corr-g-2",
+    "seededItem": {
+      "id": "record-g-2",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-g-2",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-g-2",
+        "description": "Duplicate-processing case 2"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "possibleDuplicateLogLines": true
+    }
+  },
+  {
+    "category": "duplicate_processing",
+    "id": "record-g-3",
+    "correlationId": "corr-g-3",
+    "seededItem": {
+      "id": "record-g-3",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-g-3",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-g-3",
+        "description": "Duplicate-processing case 3"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "possibleDuplicateLogLines": true
+    }
+  },
+  {
+    "category": "duplicate_processing",
+    "id": "record-g-4",
+    "correlationId": "corr-g-4",
+    "seededItem": {
+      "id": "record-g-4",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-g-4",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-g-4",
+        "description": "Duplicate-processing case 4"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "possibleDuplicateLogLines": true
+    }
+  },
+  {
+    "category": "duplicate_processing",
+    "id": "record-g-5",
+    "correlationId": "corr-g-5",
+    "seededItem": {
+      "id": "record-g-5",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-g-5",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-g-5",
+        "description": "Duplicate-processing case 5"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "possibleDuplicateLogLines": true
+    }
+  },
+  {
+    "category": "duplicate_processing",
+    "id": "record-g-6",
+    "correlationId": "corr-g-6",
+    "seededItem": {
+      "id": "record-g-6",
+      "tenantId": "tenant-demo-001",
+      "correlationId": "corr-g-6",
+      "status": "PENDING",
+      "payload": {
+        "legacyRecordId": "legacy-g-6",
+        "description": "Duplicate-processing case 6"
+      }
+    },
+    "expected": {
+      "dispatched": true,
+      "destinationWriteFails": true,
+      "failureReasonContains": "cloudRecordId is required",
+      "finalSourceStatus": "SYNCED",
+      "destinationHasRecord": false,
+      "possibleDuplicateLogLines": true
+    }
+  }
+]

@@ -4,7 +4,9 @@
   "type": "commonjs",
   "scripts": {
     "seed": "node seed-incident.js",
-    "verify": "node verify-incident.js"
+    "verify": "node verify-incident.js",
+    "seed-matrix": "node seed-test-matrix.js",
+    "verify-matrix": "node verify-test-matrix.js"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.600.0",

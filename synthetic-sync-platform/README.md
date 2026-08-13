@@ -58,6 +58,41 @@ npm run verify
 is empty — the silent-failure signature an investigation agent must detect
 from CloudWatch logs plus DynamoDB state plus the repository code.
 
+## 100-record test matrix (varied failure modes)
+
+Beyond the single `record-100` incident, `scripts/test-matrix-scenarios.js`
+defines 7 categories of real, code-reachable failure modes in
+`src/dispatcher` and `src/sync-worker` (not fabricated — each is traced to
+a specific line):
+
+| Category | Count | Root cause |
+|---|---|---|
+| `classic_mapping_bug` | 38 | `cloudRecordId` never mapped from `legacyRecordId` (the main bug) |
+| `payload_missing` | 10 | `record.payload` absent entirely — TypeError before the guard, same silent-SYNCED outcome |
+| `marshalling_bug` | 10 | `tenantId` missing — doc client **silently drops** the undefined field and the write *succeeds* with incomplete data, zero error log (found live while building this matrix; worse than a loud failure) |
+| `missing_correlation_id` | 7 | `correlationId` absent — breaks correlation-ID log search, must fall back to recordId |
+| `never_dispatched` | 14 | `status` missing/wrong-case/pre-set — dispatcher's strict equality check silently skips it, zero trace at all |
+| `healthy_control` | 15 | Fully valid payload — write actually succeeds, tests that the agent doesn't cry wolf |
+| `duplicate_processing` | 6 | Same record PUT twice while still PENDING — race for duplicate stream events |
+
+Run it:
+
+```
+cd scripts
+npm run seed-matrix    # or: node seed-test-matrix.js
+# wait ~45s for the pipeline to process all 100
+npm run verify-matrix  # or: node verify-test-matrix.js
+```
+
+`seed-test-matrix.js` writes `scripts/test-matrix-expectations.json` — a
+ground-truth manifest (category, seeded item, expected end state) checked
+into the repo. `verify-test-matrix.js` re-derives the deterministic
+infra-level outcome (source status, destination presence, field-level
+correctness) per record and per category; last run was 100/100. This
+validates the *pipeline's* behavior — validating whether the
+`incident-triage` OpenClaw skill correctly diagnoses each category is a
+separate, manual step (`openclaw agent --message "..."` per record).
+
 ## IAM design
 
 Three separate roles, least privilege each:
