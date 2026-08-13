@@ -1,0 +1,39 @@
+name: synthetic-infra-destroy
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "destroy" to tear down all synthetic-sync-platform AWS resources'
+        required: true
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: synthetic-infra
+  cancel-in-progress: false
+
+jobs:
+  destroy:
+    if: github.event.inputs.confirm == 'destroy'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: synthetic-sync-platform/infrastructure/main
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - run: terraform init
+
+      - run: terraform destroy -auto-approve

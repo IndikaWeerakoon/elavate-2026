@@ -1,0 +1,41 @@
+name: synthetic-infra-apply
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "synthetic-sync-platform/infrastructure/main/**"
+      - "synthetic-sync-platform/src/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: synthetic-infra
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: synthetic-sync-platform/infrastructure/main
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - run: terraform init
+
+      - run: terraform plan -out=tfplan
+
+      - run: terraform apply -auto-approve tfplan

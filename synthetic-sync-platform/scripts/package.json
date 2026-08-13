@@ -1,0 +1,13 @@
+{
+  "name": "synthetic-sync-platform-scripts",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "seed": "node seed-incident.js",
+    "verify": "node verify-incident.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.600.0",
+    "@aws-sdk/lib-dynamodb": "^3.600.0"
+  }
+}
