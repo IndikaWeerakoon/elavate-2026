@@ -262,25 +262,19 @@ data "aws_iam_policy_document" "github_deploy_permissions" {
   # EC2 describe/create actions mostly don't support resource-level ARNs.
   # Destructive actions are guarded by the Project tag instead.
   statement {
+    # Describe* is inherently read-only; granted broadly to avoid chasing
+    # individual attribute-read permissions the provider needs on refresh
+    # (credit specs, instance attributes, VPC attributes, etc).
+    sid       = "Ec2DescribeAll"
+    effect    = "Allow"
+    actions   = ["ec2:Describe*"]
+    resources = ["*"]
+  }
+
+  statement {
     sid    = "Ec2ReadAndCreate"
     effect = "Allow"
     actions = [
-      "ec2:DescribeInstances",
-      "ec2:DescribeInstanceAttribute",
-      "ec2:DescribeImages",
-      "ec2:DescribeInstanceTypes",
-      "ec2:DescribeInstanceStatus",
-      "ec2:DescribeSecurityGroups",
-      "ec2:DescribeSubnets",
-      "ec2:DescribeVpcs",
-      "ec2:DescribeVpcAttribute",
-      "ec2:DescribeKeyPairs",
-      "ec2:DescribeAvailabilityZones",
-      "ec2:DescribeVolumes",
-      "ec2:DescribeAddresses",
-      "ec2:DescribeTags",
-      "ec2:DescribeNetworkInterfaces",
-      "ec2:DescribeIamInstanceProfileAssociations",
       "ec2:RunInstances",
       "ec2:CreateSecurityGroup",
       "ec2:CreateTags",
