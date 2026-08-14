@@ -40,6 +40,15 @@ exports.handler = async (event) => {
 
     try {
       await writeDestination(record);
+      await updateSourceStatus(record.id, "SYNCED");
+
+      console.log(
+        JSON.stringify({
+          event: "SOURCE_MARKED_SYNCED",
+          correlationId: record.correlationId,
+          recordId: record.id,
+        })
+      );
     } catch (error) {
       console.error(
         JSON.stringify({
@@ -49,16 +58,7 @@ exports.handler = async (event) => {
           reason: error instanceof Error ? error.message : "Unknown error",
         })
       );
+      throw error;
     }
-
-    await updateSourceStatus(record.id, "SYNCED");
-
-    console.log(
-      JSON.stringify({
-        event: "SOURCE_MARKED_SYNCED",
-        correlationId: record.correlationId,
-        recordId: record.id,
-      })
-    );
   }
 };
