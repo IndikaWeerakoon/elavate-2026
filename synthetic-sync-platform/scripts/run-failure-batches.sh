@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
-# Seeds 20 all-failure records every 5 seconds for 1 hour
-# (720 ticks x 20 = 14,400 records). Resumable: pass a start tick to
-# continue after an interruption instead of restarting from 1.
+# Seeds 20 all-failure records per tick. Defaults to every 5 minutes for
+# 1 hour (12 ticks x 20 = 240 records). Override via env vars; resumable
+# via a start-tick argument instead of restarting from 1.
+#
+# Usage: ./run-failure-batches.sh [start_tick]
+#   TOTAL_TICKS=12 INTERVAL_SECONDS=300 ./run-failure-batches.sh [start_tick]
 set -euo pipefail
 cd "$(dirname "$0")"
 
-TOTAL_TICKS=720
-INTERVAL_SECONDS=5
+TOTAL_TICKS="${TOTAL_TICKS:-12}"
+INTERVAL_SECONDS="${INTERVAL_SECONDS:-300}"
 START_TICK="${1:-1}"
 
 for tick in $(seq "$START_TICK" "$TOTAL_TICKS"); do
   node seed-failure-batch.js "$tick"
-  if [ "$tick" -eq 1 ] || [ "$((tick % 60))" -eq 0 ]; then
-    echo "=== tick ${tick}/${TOTAL_TICKS} at $(date -u +%FT%TZ) ==="
-  fi
+  echo "=== tick ${tick}/${TOTAL_TICKS} at $(date -u +%FT%TZ) ==="
   if [ "$tick" -lt "$TOTAL_TICKS" ]; then
     sleep "$INTERVAL_SECONDS"
   fi
