@@ -15,8 +15,17 @@ async function writeDestination(record) {
     description: record.payload.description,
   };
 
-  if (!input.cloudRecordId) {
-    throw new Error("cloudRecordId is required");
+  // DynamoDBDocumentClient defaults to removeUndefinedValues: true, which silently
+  // drops undefined attributes from the PutItem request. A source row missing
+  // tenantId would otherwise be written as a destination row with no tenantId field,
+  // source marked SYNCED, and no log entry to alert on. Validate up front so the
+  // failure surfaces and the D1 swallow-fix in the handler can DLQ the message.
+  if (!input.cloudRecordId || !input.tenantId) {
+    throw new Error(
+      `tenantId and cloudRecordId are required, got ${JSON.stringify(
+        Object.keys(input).filter((k) => input[k] === undefined || input[k] === null)
+      )}`
+    );
   }
 
   await ddb.send(new PutCommand({ TableName: DESTINATION_TABLE, Item: input }));
