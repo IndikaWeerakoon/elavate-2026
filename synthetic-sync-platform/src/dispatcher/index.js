@@ -13,7 +13,18 @@ exports.handler = async (event) => {
     if (!record.dynamodb.NewImage) continue;
 
     const item = unmarshall(record.dynamodb.NewImage);
-    if (item.status !== "PENDING") continue;
+    if (item.status !== "PENDING") {
+      console.log(
+        JSON.stringify({
+          event: "RECORD_SKIPPED",
+          reason: "STATUS_NOT_PENDING",
+          correlationId: item.correlationId,
+          recordId: item.id,
+          actualStatus: item.status,
+        })
+      );
+      continue;
+    }
 
     await sqs.send(
       new SendMessageCommand({
