@@ -46,6 +46,26 @@
           args:
             creates: /usr/local/bin/aws
 
+    - name: Install GitHub CLI (gh)
+      block:
+        - name: Add GitHub CLI apt keyring
+          ansible.builtin.get_url:
+            url: https://cli.github.com/packages/githubcli-archive-keyring.gpg
+            dest: /usr/share/keyrings/githubcli-archive-keyring.gpg
+            mode: "0644"
+
+        - name: Add GitHub CLI apt repository
+          ansible.builtin.apt_repository:
+            repo: "deb [arch=arm64 signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main"
+            filename: github-cli
+            state: present
+
+        - name: Install gh package
+          ansible.builtin.apt:
+            name: gh
+            state: present
+            update_cache: true
+
     - name: Clone synthetic-sync-platform (public repo, read-only investigation target)
       become: true
       become_user: "{{ openclaw_user }}"
